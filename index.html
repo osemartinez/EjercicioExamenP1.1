@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EjercicioExamenP1.1</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    
+    
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        label {
+            align-self: flex-start;
+            font-size: 1.2em;
+        }
+        input {
+            width: 100%;
+            font-size: 1em;
+            padding: 8px;
+        }
+        button {
+            width: 200px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Calculadora</h2>
+        <form id="discount-form">
+            <div class="form-group">
+                <label for="product1">Producto 1:</label>
+                <input type="text" class="form-control product-input" id="product1" name="product1">
+            </div>
+            <div class="form-group">
+                <label for="product2">Producto 2:</label>
+                <input type="text" class="form-control product-input" id="product2" name="product2">
+            </div>
+            <div class="form-group">
+                <label for="product3">Producto 3:</label>
+                <input type="text" class="form-control product-input" id="product3" name="product3">
+            </div>
+            <div class="form-group">
+                <label for="product4">Producto 4:</label>
+                <input type="text" class="form-control product-input" id="product4" name="product4">
+            </div>
+            <div class="form-group">
+                <label for="product5">Producto 5:</label>
+                <input type="text" class="form-control product-input" id="product5" name="product5">
+            </div>
+            <div class="form-group">
+                <label for="subtotal">Subtotal:</label>
+                <input type="text" class="form-control bg-light" id="subtotal" name="subtotal" readonly>
+            </div>
+            <div class="form-group">
+                <label for="discount">Descuento:</label>
+                <input type="text" class="form-control bg-info" id="discount" name="discount" value="Descuento 0%" readonly>
+            </div>
+            <div class="form-group">
+                <label for="total">Total a pagar:</label>
+                <input type="text" class="form-control bg-warning" id="total" name="total" readonly>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" onclick="calcularDescuento()">Calcular</button>
+            <button type="button" class="btn btn-secondary btn-lg" onclick="limpiarFormulario()">Limpiar</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
